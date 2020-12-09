@@ -1,0 +1,173 @@
+
+@font-face {
+  font-family: 'Coiny';
+  src: url('fonts/Coiny-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url('fonts/OpenSans-Bold-webfont.woff') format('woff');
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: OpenSans;
+  font-size: 18px;
+
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #386fa4;
+}
+
+div{
+  padding: 2px;
+}
+
+a{
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+
+.intro{
+  font-family: OpenSansBold;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+/* ---------- SEARCH SECTOR ---------- */
+
+.inputForm{
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.search-button{
+  background:url('images/loupe.svg') no-repeat  no-repeat;
+  width: 25px;
+  height: 25px;
+  border: 0px;
+  margin-left: 10px;
+}
+
+.localization-button{
+  background:url('images/place.svg') no-repeat  no-repeat;
+  width: 25px;
+  height: 25px;
+  border: 2px;
+  margin-left: 10px;
+}
+
+#cityRequest{
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  border: 2px solid grey;
+  padding: 5px
+
+}
+
+/* ---------- BIG INFORMATION ---------- */
+
+#nameCity,
+#temperature {
+  font-family: OpenSansBold;
+  font-size: 2.5em;
+}
+
+.weather-card {
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background-image: url("images/weatherBackgroung50.jpg");
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+
+}
+
+.big-information{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ---------- OTHER INFORMATION ---------- */
+
+.weather-card-info {
+  padding: 10px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background-color: #dfe7f6;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+
+}
+
+/* ---------- OTHER INFORMATION ---------- */
+footer{
+  margin-top: 75px;
+}
+
+.info-footer{
+  text-align: center;
+}
+
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright,
+.social {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.instagram,
+.facebook,
+.twitter,
+.github {
+  margin-left: 10px;
+}
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 591px) {
+
+  .weather-card,
+  .weather-card-info {
+    width: 550px;
+  }
+
+}

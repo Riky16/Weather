@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+
+    <!-- Risorse -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="src/index.js"></script>
+    <script type="text/javascript" src="src/jQuery.js"></script>
+    <script src="src/lodash.js"></script>
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <h1 class="intro">Che tempo fa a ...</h1>
+
+    <!-- SEARCH -->
+    <form id="request" action="index.html" method="post" class="inputForm">
+      <input type="text" id="cityRequest" placeholder="Città" />
+      <button
+        type="button"
+        name="button"
+        onclick="requestSearchButton()"
+        class="search-button"
+      ></button>
+      <button
+        onclick="getLocation()"
+        type="button"
+        class="localization-button"
+      ></button>
+    </form>
+
+    <!-- BIG INFORMATION -->
+    <div class="weather-card" id="weatherBG">
+      <div id="nameCity">Città</div>
+      <div id="description">Condizioni Meteo</div>
+
+      <div class="big-information">
+        <div id="weatherImage">
+          <img
+            src="http://openweathermap.org/img/wn/01d@2x.png"
+            class="myImg"
+            alt=""
+          />
+        </div>
+        <h1 class="temp-style" id="temperature">--°</h1>
+      </div>
+    </div>
+
+    <!-- OTHER INFORMATION -->
+    <div class="weather-card-info">
+      <div id="wind">Velocità del Vento:</div>
+      <div id="tempMaxMin">MAX: --° / MIN: --°</div>
+      <div id="humidity">Umidità:</div>
+      <div id="pressure">Pressione:</div>
+    </div>
+
+    <div id="errorRequest"></div>
+
+    <footer>
+      <div class="info-footer">
+        Sito realizzato tramite le API di
+        <a
+          href="https://openweathermap.org/api"
+          class="OpenWeatherMap"
+          target="_blank"
+          >OpenWeatherMap</a
+        >.
+      </div>
+      <div class="footer-container">
+        <!-- COPY -->
+        <div class="copyright">&copy; 2020 / Riccardo Donati</div>
+        <!-- SOCIAL -->
+        <div class="social">
+          <a
+            href="https://www.instagram.com/imriky16/"
+            class="instagram"
+            target="_blank"
+            ><img
+              src="images/instagram.svg"
+              alt="instagram"
+              class="social-icon"
+              height="25px"
+              width="25px"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/riccardo.donati.184/"
+            class="facebook"
+            target="_blank"
+            ><img
+              src="images/facebook.svg"
+              alt="facebook"
+              height="25px"
+              width="25px"
+            />
+          </a>
+          <a href="https://twitter.com/imriky16" class="twitter" target="_blank"
+            ><img
+              src="images/twitter.svg"
+              alt="twitter"
+              height="25px"
+              width="25px"
+            />
+          </a>
+          <a href="https://github.com/Riky16" class="github" target="_blank"
+            ><img
+              src="images/github.svg"
+              alt="github"
+              height="25px"
+              width="25px"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
